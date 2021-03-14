@@ -11,18 +11,20 @@ struct TopPanelView: View {
     var body: some View {
         HStack {
             Image(systemName: "wallet.pass")
-                .foregroundColor(.gray)
-                .accentColor(.blue)
+                .foregroundColor(.init(UIColor.secondaryLabel))
+                .accentColor(.init(UIColor.systemBlue))
             Text("My Wallet")
-                .font(Font.system(size: 14, weight: .bold, design: .default))
+                .font(.footnote)
+                .fontWeight(.bold)
             Spacer()
             Text("User name")
-                .font(Font.system(size: 14, weight: .medium, design: .default))
-                .foregroundColor(.gray)
+                .font(.footnote)
+                .fontWeight(.medium)
+                .foregroundColor(.init(UIColor.secondaryLabel))
             
         }
         .padding()
-        .background(Color.white)
+        .background(Color(UIColor.systemBackground))
     }
 }
 
