@@ -13,6 +13,7 @@ extension BankCardType {
         case .amex:
             return AnyView(Image(imageName)
                 .resizable()
+                .renderingMode(.template)
                 .foregroundColor(.white)
                 .scaledToFill()
                 .frame(width: 72, height: 22, alignment: .leading)

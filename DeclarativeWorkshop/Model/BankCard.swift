@@ -43,9 +43,9 @@ struct BankTransaction {
 
 extension BankCard {
     static let cards: [BankCard] = [
-        BankCard(cardholderName: "Maria Smith", type: .visa, cardNumber: "1234567812345671"),
+        BankCard(cardholderName: "Maria Smith", type: .amex, cardNumber: "1234567812345671"),
         BankCard(cardholderName: "Maria Smith", type: .visa, cardNumber: "1234567812345672"),
         BankCard(cardholderName: "Maria Smith", type: .masterCard, cardNumber: "1234567812345673"),
-        BankCard(cardholderName: "Maria Smith", type: .amex, cardNumber: "1234567812345674")
+        //BankCard(cardholderName: "Maria Smith", type: .amex, cardNumber: "1234567812345674")
     ]
 }
