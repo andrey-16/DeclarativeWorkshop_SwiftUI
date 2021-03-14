@@ -15,6 +15,9 @@
 		5595FB2325FE403700F93151 /* TopPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5595FB2225FE403700F93151 /* TopPanelView.swift */; };
 		5595FB2625FE456B00F93151 /* BankCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5595FB2525FE456B00F93151 /* BankCard.swift */; };
 		D818757525FE2C4C0098F471 /* CompactCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D818757425FE2C4C0098F471 /* CompactCardView.swift */; };
+		D818757925FE74230098F471 /* TotalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D818757825FE74220098F471 /* TotalsView.swift */; };
+		D818757C25FE8A840098F471 /* TransactionCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D818757B25FE8A840098F471 /* TransactionCellView.swift */; };
+		D818757F25FEA5120098F471 /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = D818757E25FEA5120098F471 /* Formatters.swift */; };
 		D86F42E625FD85ED006060F4 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86F42E525FD85ED006060F4 /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +32,9 @@
 		5595FB2225FE403700F93151 /* TopPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopPanelView.swift; sourceTree = "<group>"; };
 		5595FB2525FE456B00F93151 /* BankCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankCard.swift; sourceTree = "<group>"; };
 		D818757425FE2C4C0098F471 /* CompactCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompactCardView.swift; sourceTree = "<group>"; };
+		D818757825FE74220098F471 /* TotalsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalsView.swift; sourceTree = "<group>"; };
+		D818757B25FE8A840098F471 /* TransactionCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCellView.swift; sourceTree = "<group>"; };
+		D818757E25FEA5120098F471 /* Formatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatters.swift; sourceTree = "<group>"; };
 		D86F42E525FD85ED006060F4 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,8 +108,11 @@
 		D818757225FE2C210098F471 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
-				D86F42E525FD85ED006060F4 /* DetailView.swift */,
 				D818757425FE2C4C0098F471 /* CompactCardView.swift */,
+				D86F42E525FD85ED006060F4 /* DetailView.swift */,
+				D818757E25FEA5120098F471 /* Formatters.swift */,
+				D818757825FE74220098F471 /* TotalsView.swift */,
+				D818757B25FE8A840098F471 /* TransactionCellView.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -182,7 +191,10 @@
 				5595FB2625FE456B00F93151 /* BankCard.swift in Sources */,
 				D86F42E625FD85ED006060F4 /* DetailView.swift in Sources */,
 				5563064F25FA01A100A68991 /* DeclarativeWorkshopApp.swift in Sources */,
+				D818757925FE74230098F471 /* TotalsView.swift in Sources */,
+				D818757C25FE8A840098F471 /* TransactionCellView.swift in Sources */,
 				5517451B25FE3D770077A2BE /* BankCardCellView.swift in Sources */,
+				D818757F25FEA5120098F471 /* Formatters.swift in Sources */,
 				5595FB2325FE403700F93151 /* TopPanelView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

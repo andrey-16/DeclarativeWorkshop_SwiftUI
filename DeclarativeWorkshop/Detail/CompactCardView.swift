@@ -15,8 +15,9 @@ struct CompactCardView: View {
         HStack {
             Image("mastercard")
                 .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(maxWidth: 48, maxHeight: 48, alignment: .trailing)
+                .scaledToFill()
+                .frame(width: 80, height: 48, alignment: .leading)
+                .padding(.horizontal)
             VStack(alignment: .leading, spacing: 4.0) {
                 Text(cardholderName)
                     .foregroundColor(.white)
@@ -26,12 +27,14 @@ struct CompactCardView: View {
                     .fontWeight(.bold)
                     .foregroundColor(.white)
             }
+            Spacer()
             Image(systemName: "arrow.right")
+                .frame(maxHeight: .infinity)
                 .foregroundColor(.white)
+                .padding(.horizontal)
                 .background(Color.purple)
         }
-        .frame(maxWidth: .infinity)
-        .padding()
+        .frame(maxWidth: .infinity, maxHeight: 80)
         .background(Color.blue)
         .cornerRadius(10.0)
         .padding(.horizontal)

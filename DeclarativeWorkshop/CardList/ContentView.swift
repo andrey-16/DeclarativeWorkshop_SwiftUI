@@ -18,7 +18,7 @@ struct ContentView: View {
                 ScrollView {
                     ForEach(cards) { (bankCard) in
                         NavigationLink(
-                            destination: DetailView(),
+                            destination: DetailView(bankCard: bankCard),
                             label: {
                                 BankCardCellView(card: bankCard)
                             })
