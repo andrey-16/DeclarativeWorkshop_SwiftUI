@@ -11,6 +11,8 @@ struct DetailView: View {
     var body: some View {
         VStack {
             CompactCardView(cardholderName: "Maria Smith", cardNumber: "•••• •••• •••• 1233")
+                .padding(.top)
+            
             HStack {
                 VStack {
                     Text("Income")
@@ -42,6 +44,7 @@ struct DetailView: View {
             }
         }
         .navigationTitle("Dashboard")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
