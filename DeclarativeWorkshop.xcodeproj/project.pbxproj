@@ -18,6 +18,7 @@
 		D818757925FE74230098F471 /* TotalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D818757825FE74220098F471 /* TotalsView.swift */; };
 		D818757C25FE8A840098F471 /* TransactionCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D818757B25FE8A840098F471 /* TransactionCellView.swift */; };
 		D818757F25FEA5120098F471 /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = D818757E25FEA5120098F471 /* Formatters.swift */; };
+		D818758325FEB4080098F471 /* BankCardType+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D818758225FEB4080098F471 /* BankCardType+UI.swift */; };
 		D86F42E625FD85ED006060F4 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86F42E525FD85ED006060F4 /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		D818757825FE74220098F471 /* TotalsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalsView.swift; sourceTree = "<group>"; };
 		D818757B25FE8A840098F471 /* TransactionCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCellView.swift; sourceTree = "<group>"; };
 		D818757E25FEA5120098F471 /* Formatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatters.swift; sourceTree = "<group>"; };
+		D818758225FEB4080098F471 /* BankCardType+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BankCardType+UI.swift"; sourceTree = "<group>"; };
 		D86F42E525FD85ED006060F4 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -61,6 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				5517451A25FE3D770077A2BE /* BankCardCellView.swift */,
+				D818758225FEB4080098F471 /* BankCardType+UI.swift */,
 				5563065025FA01A100A68991 /* ContentView.swift */,
 				5595FB2225FE403700F93151 /* TopPanelView.swift */,
 			);
@@ -190,6 +193,7 @@
 				5563065125FA01A100A68991 /* ContentView.swift in Sources */,
 				5595FB2625FE456B00F93151 /* BankCard.swift in Sources */,
 				D86F42E625FD85ED006060F4 /* DetailView.swift in Sources */,
+				D818758325FEB4080098F471 /* BankCardType+UI.swift in Sources */,
 				5563064F25FA01A100A68991 /* DeclarativeWorkshopApp.swift in Sources */,
 				D818757925FE74230098F471 /* TotalsView.swift in Sources */,
 				D818757C25FE8A840098F471 /* TransactionCellView.swift in Sources */,

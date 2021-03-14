@@ -8,21 +8,17 @@
 import SwiftUI
 
 struct CompactCardView: View {
-    let cardholderName: String
-    let cardNumber: String
+    let bankCard: BankCard
     
     var body: some View {
         HStack {
-            Image("mastercard")
-                .resizable()
-                .scaledToFill()
-                .frame(width: 80, height: 48, alignment: .leading)
+            bankCard.type.logoView
                 .padding(.horizontal)
             VStack(alignment: .leading, spacing: 4.0) {
-                Text(cardholderName)
+                Text(bankCard.cardholderName)
                     .foregroundColor(.white)
                     .fontWeight(.bold)
-                Text(cardNumber)
+                Text(maskedCardNumber)
                     .font(.footnote)
                     .fontWeight(.bold)
                     .foregroundColor(.white)
@@ -32,18 +28,25 @@ struct CompactCardView: View {
                 .frame(maxHeight: .infinity)
                 .foregroundColor(.white)
                 .padding(.horizontal)
-                .background(Color.purple)
+                .background(bankCard.type.color)
         }
         .frame(maxWidth: .infinity, maxHeight: 80)
-        .background(Color.blue)
+        .background(LinearGradient(gradient: Gradient(colors: [bankCard.type.color.opacity(0.5), bankCard.type.color.opacity(0.9)]), startPoint: .leading, endPoint: .trailing))
         .cornerRadius(10.0)
         .padding(.horizontal)
-
+    }
+    
+    var maskedCardNumber: String {
+        "•••• •••• •••• " + bankCard.cardNumber.suffix(4)
     }
 }
 
 struct CompactCardView_Previews: PreviewProvider {
     static var previews: some View {
-        CompactCardView(cardholderName: "Maria Smith", cardNumber: "•••• •••• •••• 1233")
+        VStack {
+            CompactCardView(bankCard: BankCard(cardholderName: "Maria Smith", type: .amex, cardNumber: "1234 5678 0011 3322", transactions: []))
+            CompactCardView(bankCard: BankCard(cardholderName: "Konstantin Konstantinopolskiy", type: .visa, cardNumber: "1234 5678 0011 1919", transactions: []))
+            CompactCardView(bankCard: BankCard(cardholderName: "ぁつざほぽろゕヺポ", type: .masterCard, cardNumber: "1234 5678 0011 2211", transactions: []))
+        }
     }
 }

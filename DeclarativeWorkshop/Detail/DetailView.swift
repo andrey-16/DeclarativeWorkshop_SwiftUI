@@ -13,7 +13,7 @@ struct DetailView: View {
     
     var body: some View {
         VStack {
-            CompactCardView(cardholderName: bankCard.cardholderName, cardNumber: bankCard.cardNumber)
+            CompactCardView(bankCard: bankCard)
                 .padding(.top)
             totalsSection
             Divider()
@@ -83,7 +83,7 @@ struct DetailView: View {
             .cornerRadius(5.0)
             .offset(x: 0, y: 20.0)
             .zIndex(999.0)
-    }
+    }    
 }
 
 struct DetailView_Previews: PreviewProvider {
