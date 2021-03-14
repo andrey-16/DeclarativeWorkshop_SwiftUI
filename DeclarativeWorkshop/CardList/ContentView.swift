@@ -28,6 +28,7 @@ struct ContentView: View {
                 .navigationBarHidden(true)                
             }
             .background(LinearGradient(gradient: Gradient(colors: [Color.gray.opacity(0.2), Color.gray.opacity(0.5)]), startPoint: .top, endPoint: .bottom))
+            .ignoresSafeArea(.container, edges: .bottom)
         }
     }
 }
