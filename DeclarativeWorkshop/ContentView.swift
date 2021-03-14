@@ -15,17 +15,17 @@ struct ContentView: View {
                 
                 ScrollView {
                     NavigationLink(
-                        destination: Text("Destination"),
+                        destination: DetailView(),
                         label: {
                             BankCard()
                         })
                     NavigationLink(
-                        destination: Text("Destination"),
+                        destination: DetailView(),
                         label: {
                             BankCard()
                         })
                     NavigationLink(
-                        destination: Text("Destination"),
+                        destination: DetailView(),
                         label: {
                             BankCard()
                         })
