@@ -9,17 +9,32 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            TopPanel()
-            
-            ScrollView {
-                // TODO: Replace by navigation link
-                BankCard()
-                BankCard()
-                BankCard()
+        NavigationView {
+            VStack {
+                TopPanel()
+                
+                ScrollView {
+                    NavigationLink(
+                        destination: Text("Destination"),
+                        label: {
+                            BankCard()
+                        })
+                    NavigationLink(
+                        destination: Text("Destination"),
+                        label: {
+                            BankCard()
+                        })
+                    NavigationLink(
+                        destination: Text("Destination"),
+                        label: {
+                            BankCard()
+                        })
+                }
+                .navigationBarTitle("")
+                .navigationBarHidden(true)                
             }
+            .background(LinearGradient(gradient: Gradient(colors: [Color.gray.opacity(0.2), Color.gray.opacity(0.5)]), startPoint: .top, endPoint: .bottom))
         }
-        .background(LinearGradient(gradient: Gradient(colors: [Color.gray.opacity(0.2), Color.gray.opacity(0.5)]), startPoint: .top, endPoint: .bottom))
     }
 }
 
