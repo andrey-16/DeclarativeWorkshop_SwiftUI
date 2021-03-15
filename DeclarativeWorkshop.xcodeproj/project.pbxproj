@@ -7,13 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5517451B25FE3D770077A2BE /* BankCardCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5517451A25FE3D770077A2BE /* BankCardCellView.swift */; };
+		5517451B25FE3D770077A2BE /* BankCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5517451A25FE3D770077A2BE /* BankCardView.swift */; };
 		5563064F25FA01A100A68991 /* DeclarativeWorkshopApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5563064E25FA01A100A68991 /* DeclarativeWorkshopApp.swift */; };
 		5563065125FA01A100A68991 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5563065025FA01A100A68991 /* ContentView.swift */; };
 		5563065325FA01A100A68991 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5563065225FA01A100A68991 /* Assets.xcassets */; };
 		5563065625FA01A100A68991 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5563065525FA01A100A68991 /* Preview Assets.xcassets */; };
 		5595FB2325FE403700F93151 /* TopPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5595FB2225FE403700F93151 /* TopPanelView.swift */; };
 		5595FB2625FE456B00F93151 /* BankCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5595FB2525FE456B00F93151 /* BankCard.swift */; };
+		5595FB5025FF03E800F93151 /* BankCardSwipeableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5595FB4F25FF03E800F93151 /* BankCardSwipeableCell.swift */; };
+		55A1935525FF1CA900158F1A /* DeleteButtonShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A1935425FF1CA900158F1A /* DeleteButtonShape.swift */; };
 		D818757525FE2C4C0098F471 /* CompactCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D818757425FE2C4C0098F471 /* CompactCardView.swift */; };
 		D818757925FE74230098F471 /* TotalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D818757825FE74220098F471 /* TotalsView.swift */; };
 		D818757C25FE8A840098F471 /* TransactionCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D818757B25FE8A840098F471 /* TransactionCellView.swift */; };
@@ -23,7 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5517451A25FE3D770077A2BE /* BankCardCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankCardCellView.swift; sourceTree = "<group>"; };
+		5517451A25FE3D770077A2BE /* BankCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankCardView.swift; sourceTree = "<group>"; };
 		5563064B25FA01A100A68991 /* DeclarativeWorkshop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeclarativeWorkshop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5563064E25FA01A100A68991 /* DeclarativeWorkshopApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeclarativeWorkshopApp.swift; sourceTree = "<group>"; };
 		5563065025FA01A100A68991 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,6 +34,8 @@
 		5563065725FA01A100A68991 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5595FB2225FE403700F93151 /* TopPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopPanelView.swift; sourceTree = "<group>"; };
 		5595FB2525FE456B00F93151 /* BankCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankCard.swift; sourceTree = "<group>"; };
+		5595FB4F25FF03E800F93151 /* BankCardSwipeableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankCardSwipeableCell.swift; sourceTree = "<group>"; };
+		55A1935425FF1CA900158F1A /* DeleteButtonShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteButtonShape.swift; sourceTree = "<group>"; };
 		D818757425FE2C4C0098F471 /* CompactCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompactCardView.swift; sourceTree = "<group>"; };
 		D818757825FE74220098F471 /* TotalsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalsView.swift; sourceTree = "<group>"; };
 		D818757B25FE8A840098F471 /* TransactionCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCellView.swift; sourceTree = "<group>"; };
@@ -62,8 +66,7 @@
 		5517451925FE3D660077A2BE /* CardList */ = {
 			isa = PBXGroup;
 			children = (
-				5517451A25FE3D770077A2BE /* BankCardCellView.swift */,
-				D818758225FEB4080098F471 /* BankCardType+UI.swift */,
+				55A1935725FF209200158F1A /* BankCell */,
 				5563065025FA01A100A68991 /* ContentView.swift */,
 				5595FB2225FE403700F93151 /* TopPanelView.swift */,
 			);
@@ -106,6 +109,17 @@
 				5563065525FA01A100A68991 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		55A1935725FF209200158F1A /* BankCell */ = {
+			isa = PBXGroup;
+			children = (
+				5517451A25FE3D770077A2BE /* BankCardView.swift */,
+				5595FB4F25FF03E800F93151 /* BankCardSwipeableCell.swift */,
+				55A1935425FF1CA900158F1A /* DeleteButtonShape.swift */,
+				D818758225FEB4080098F471 /* BankCardType+UI.swift */,
+			);
+			path = BankCell;
 			sourceTree = "<group>";
 		};
 		D818757225FE2C210098F471 /* Detail */ = {
@@ -193,11 +207,13 @@
 				5563065125FA01A100A68991 /* ContentView.swift in Sources */,
 				5595FB2625FE456B00F93151 /* BankCard.swift in Sources */,
 				D86F42E625FD85ED006060F4 /* DetailView.swift in Sources */,
+				5595FB5025FF03E800F93151 /* BankCardSwipeableCell.swift in Sources */,
 				D818758325FEB4080098F471 /* BankCardType+UI.swift in Sources */,
 				5563064F25FA01A100A68991 /* DeclarativeWorkshopApp.swift in Sources */,
+				55A1935525FF1CA900158F1A /* DeleteButtonShape.swift in Sources */,
 				D818757925FE74230098F471 /* TotalsView.swift in Sources */,
 				D818757C25FE8A840098F471 /* TransactionCellView.swift in Sources */,
-				5517451B25FE3D770077A2BE /* BankCardCellView.swift in Sources */,
+				5517451B25FE3D770077A2BE /* BankCardView.swift in Sources */,
 				D818757F25FEA5120098F471 /* Formatters.swift in Sources */,
 				5595FB2325FE403700F93151 /* TopPanelView.swift in Sources */,
 			);

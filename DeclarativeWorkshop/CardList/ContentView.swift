@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
-    private let cards = BankCard.cards
+    @State private var cards = BankCard.cards
     
     var body: some View {
         NavigationView {
-            VStack {
+            VStack(spacing: 0) {
                 TopPanelView()
                 
                 ScrollView {
@@ -20,9 +20,12 @@ struct ContentView: View {
                         NavigationLink(
                             destination: DetailView(bankCard: bankCard),
                             label: {
-                                BankCardCellView(card: bankCard)
+                                BankCardSwipeableCell(card: bankCard, cards: $cards)
                             })
+                            .buttonStyle(PlainButtonStyle())
                     }
+                    .padding(.top)
+                    .animation(.easeIn)
                 }
                 .navigationBarTitle("")
                 .navigationBarHidden(true)                
@@ -37,6 +40,6 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
             .previewDevice(PreviewDevice(rawValue: "iPhone 12"))
-                        .previewDisplayName("iPhone 12")
+            .previewDisplayName("iPhone 12")
     }
 }
