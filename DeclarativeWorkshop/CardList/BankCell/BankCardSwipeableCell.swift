@@ -42,11 +42,7 @@ struct BankCardSwipeableCell : View {
                 .clipShape(DeleteButtonShape(radius: 8) )
                 .offset(x: -10)
                 .onTapGesture {
-                    if let index = cards.firstIndex(where: { (item) -> Bool in
-                        item.id == self.card.id
-                    }) {
-                        cards.remove(at: index)
-                    }
+                    deleteCard()
                 }
             }
             // Swipe modifiers:
@@ -57,7 +53,9 @@ struct BankCardSwipeableCell : View {
                             self.offset.width = gesture.translation.width
                         }
                         .onEnded { _ in
-                            if self.offset.width < -50 {
+                            if self.offset.width < -200 {
+                                deleteCard()
+                            } else if self.offset.width < -50 {
                                 self.scale = 1.2
                                 self.offset.width = -80
                             } else {
@@ -70,7 +68,15 @@ struct BankCardSwipeableCell : View {
         .frame(height: 130)
     }
     
-    func positive(value: CGFloat) -> CGFloat {
+    private func deleteCard() {
+        if let index = cards.firstIndex(where: { (item) -> Bool in
+            item.id == self.card.id
+        }) {
+            cards.remove(at: index)
+        }
+    }
+    
+    private func positive(value: CGFloat) -> CGFloat {
         if value <= 0 {
             return 0.0
         } else {
